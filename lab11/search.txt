@@ -1,0 +1,2 @@
+and or xor not
+and goodbye!
