@@ -40,11 +40,20 @@ void print_list(node *list) {
 }
 
 int main() {
+	int size, i;
+	puts("How many numbers are in the list?");
+	scanf("%d", &size);
+	
 	node *list1 = create_list();
-	list1->value = 10;
-	list1 = add_to_head(list1, 20);
-	list1 = add_to_head(list1, 30);
-	list1 = add_to_head(list1, 40);
+	int val;
+	for(i = 0; i < size; i++) {
+		puts("Enter a num");
+		scanf("%d", &val);
+		if (i == 0)
+			list1->value = val;
+		else
+			list1 = add_to_head(list1, val);
+	}
 
 	print_list(list1);
 	delete_list(list1);

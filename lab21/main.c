@@ -20,8 +20,9 @@ int main() {
 	printf("Sum: %lf\n", sum);
 
 	double newnum;
-	int found = 0;
+	int found;
 	for(i = 0; i < 3; i++) {
+		found = 0;
 		printf("Enter a number: ");
 		scanf("%lf", &newnum);
 		for(j = 0; j < size; j++) {
